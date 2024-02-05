@@ -60,13 +60,13 @@ async def start_services():
     print('-------------------- Initalizing Web Server -------------------------')
     app = web.AppRunner(await web_server())
     await app.setup()
-    bind_address = ".railway.app" if Var.ON_HEROKU else Var.BIND_ADRESS
+    bind_address = "0.0.0.0" if Var.ON_HEROKU else Var.BIND_ADRESS
     await web.TCPSite(app, bind_address, Var.PORT).start()
     print('----------------------------- DONE ---------------------------------------------------------------------')
     print('\n')
     print('---------------------------------------------------------------------------------------------------------')
     print('---------------------------------------------------------------------------------------------------------')
-    print(' follow me for more such exciting bots! https://github.com/aadhi000')
+    print(' follow me for more such exciting bots! https://github.com/Rishikesh-Sharma09')
     print('---------------------------------------------------------------------------------------------------------')
     print('\n')
     print('----------------------- Service Started -----------------------------------------------------------------')
@@ -76,7 +76,7 @@ async def start_services():
     if Var.ON_HEROKU:
         print('                        app runnng on =>> {}'.format(Var.FQDN))
     print('---------------------------------------------------------------------------------------------------------')
-    print('Give a star to my repo https://github.com/adarsh-goel/filestreambot-pro  also follow me for new bots')
+    print('Give a star to my repo https://github.com/Rishikesh-Sharma09/File-to-link  also follow me for new bots')
     print('---------------------------------------------------------------------------------------------------------')
     await idle()
 
